@@ -1,0 +1,5 @@
+{
+    "mongoURI": "mongodb+srv://mayank:mayank@cluster0.hoqgh.mongodb.net/devconnector?retryWrites=true&w=majority",
+    "jwtSecret": "DHDKJDKJDKJDJKHDKJHD",
+    "githubToken": "<yoursecrectaccesstoken>"
+}

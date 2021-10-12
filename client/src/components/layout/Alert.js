@@ -1,5 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+const Alert = () =>
+    (
+    <div className={`alert alert-`}>
+      Alert
+    </div>
+  );
+
+  export default (Alert);
+
+/*
+import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const Alert = ({ alerts }) =>
@@ -18,3 +31,4 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps)(Alert);
+ */

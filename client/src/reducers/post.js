@@ -1,3 +1,5 @@
+
+/*
 import {
   GET_POSTS,
   POST_ERROR,
@@ -81,3 +83,4 @@ function postReducer(state = initialState, action) {
 }
 
 export default postReducer;
+ */

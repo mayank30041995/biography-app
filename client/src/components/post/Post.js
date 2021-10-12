@@ -1,3 +1,4 @@
+/*
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -41,3 +42,4 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { getPost })(Post);
+ */

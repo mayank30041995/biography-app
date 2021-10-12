@@ -1,3 +1,4 @@
+/*
 import api from '../utils/api';
 import { setAlert } from './alert';
 
@@ -222,3 +223,5 @@ export const deleteAccount = () => async (dispatch) => {
     }
   }
 };
+
+*/

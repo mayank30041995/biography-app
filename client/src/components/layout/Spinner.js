@@ -1,3 +1,6 @@
+
+
+/*
 import React, { Fragment } from 'react';
 import spinner from './spinner.gif';
 
@@ -12,3 +15,4 @@ const Spinner = () => (
 );
 
 export default Spinner;
+ */

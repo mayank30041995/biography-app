@@ -1,3 +1,7 @@
+
+
+
+/*
 import {
   GET_PROFILE,
   PROFILE_ERROR,
@@ -63,3 +67,4 @@ function profileReducer(state = initialState, action) {
 }
 
 export default profileReducer;
+ */

@@ -1,3 +1,5 @@
+
+/*
 import React from 'react';
 import PropTypes from 'prop-types';
 import formatDate from '../../utils/formatDate';
@@ -27,3 +29,4 @@ ProfileEducation.propTypes = {
 };
 
 export default ProfileEducation;
+ */

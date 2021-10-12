@@ -1,3 +1,5 @@
+
+/*
 import api from '../utils/api';
 import { setAlert } from './alert';
 import {
@@ -154,3 +156,5 @@ export const deleteComment = (postId, commentId) => async dispatch => {
     });
   }
 };
+
+*/

@@ -1,3 +1,4 @@
+/*
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -47,3 +48,4 @@ Experience.propTypes = {
 };
 
 export default connect(null, { deleteExperience })(Experience);
+ */

@@ -1,3 +1,5 @@
+
+/*
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
@@ -32,3 +34,4 @@ ProfileAbout.propTypes = {
 };
 
 export default ProfileAbout;
+ */

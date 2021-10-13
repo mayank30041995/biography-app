@@ -10,10 +10,23 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
     getProfiles();
   }, [getProfiles]);
 
-
-  
     return (
-      <b>Profiles:{JSON.stringify(profiles)} <br/>   Loading:{JSON.stringify(loading)}</b>
+      <Fragment>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <Fragment>
+          <h1 className='large text-primary'>Developers</h1>
+          <p className='lead'>
+            <i className='fab fa-connectdevelop' /> Browse and connect with
+            developers
+          </p>
+          <div className='profiles'>
+            {JSON.stringify(profiles)}
+          </div>
+        </Fragment>
+      )}
+    </Fragment>
     );
   };
 

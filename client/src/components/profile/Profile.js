@@ -2,16 +2,23 @@ import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { getProfileById } from '../../actions/profile';
 
-const Profile = () => {
+
+const Profile = ({getProfileById,profile: { profile }, auth, match}) => {
+
+  useEffect(() => {
+    getProfileById(match.params.id);
+  }, [getProfileById, match.params.id]);
+
   return (
-    
         <Fragment>
           <Link to="/profiles" className="btn btn-light">
             Back To Profiles
           </Link>
+          {JSON.stringify(profile)} {JSON.stringify(auth)}
           </Fragment>
-  )
+    )
 };
 
 Profile.propTypes = {
@@ -25,7 +32,7 @@ const mapStateToProps = (state) => ({
   auth: state.auth
 });
 
-export default connect(mapStateToProps)(Profile);
+export default connect(mapStateToProps, { getProfileById })(Profile);
 /*
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';

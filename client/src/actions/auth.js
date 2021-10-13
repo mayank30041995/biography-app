@@ -6,14 +6,15 @@ import {
   LOGIN_FAIL,
   LOGIN_SUCCESS,
   USER_LOADED,
-  AUTH_ERROR
+  AUTH_ERROR,
+  LOGOUT
 } from './types';
 
 // Load User
 export const loadUser = () => async dispatch => {
   try {
     const res = await api.get('/auth');
-console.log("user", res.data)
+    console.log("user", res.data)
     dispatch({
       type: USER_LOADED,
       payload: res.data
@@ -27,7 +28,7 @@ console.log("user", res.data)
 
 // Register User
 export const register = formData => async dispatch => {
-  
+
   try {
     const res = await api.post('/users', formData);
     dispatch({
@@ -37,7 +38,7 @@ export const register = formData => async dispatch => {
     dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;
-  //  console.error("errror", errors)
+    //  console.error("errror", errors)
     if (errors) {
       errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
     }
@@ -60,7 +61,7 @@ export const login = (email, password) => async dispatch => {
       payload: res.data
     });
 
-   dispatch(loadUser());
+    dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;
 
@@ -72,8 +73,11 @@ export const login = (email, password) => async dispatch => {
       type: LOGIN_FAIL
     });
   }
+ 
 };
 
+ // Logout
+ export const logout = () => ({ type: LOGOUT });
 
 /*
 import api from '../utils/api';

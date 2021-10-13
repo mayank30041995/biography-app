@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import { logout } from '../../actions/auth';
+import { connect } from 'react-redux';
 
-const Navbar = () => {
+const Navbar = ({logout}) => {
   const authLinks = (
     <ul>
       <li>
@@ -17,7 +19,7 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
-        <a  href="#!">
+        <a onClick={logout} href="#!">
           <i className="fas fa-sign-out-alt" />{' '}
           <span className="hide-sm">Logout</span>
         </a>
@@ -52,7 +54,9 @@ const Navbar = () => {
 };
 
 
-export default (Navbar);
+export default connect(null, { logout })(Navbar);
+
+
 /*
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';

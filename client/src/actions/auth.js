@@ -5,7 +5,25 @@ import {
   REGISTER_FAIL,
   LOGIN_FAIL,
   LOGIN_SUCCESS,
+  USER_LOADED,
+  AUTH_ERROR
 } from './types';
+
+// Load User
+export const loadUser = () => async dispatch => {
+  try {
+    const res = await api.get('/auth');
+console.log("user", res.data)
+    dispatch({
+      type: USER_LOADED,
+      payload: res.data
+    });
+  } catch (err) {
+    dispatch({
+      type: AUTH_ERROR
+    });
+  }
+};
 
 // Register User
 export const register = formData => async dispatch => {
@@ -16,7 +34,7 @@ export const register = formData => async dispatch => {
       type: REGISTER_SUCCESS,
       payload: res.data
     });
-    // dispatch(loadUser());
+    dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;
   //  console.error("errror", errors)
@@ -42,7 +60,7 @@ export const login = (email, password) => async dispatch => {
       payload: res.data
     });
 
-    // dispatch(loadUser());
+   dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;
 

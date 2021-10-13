@@ -3,7 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import Alert from '../layout/Alert';
 import Register from '../auth/Register';
 import Login from '../auth/Login';
-
+import Profiles from '../profiles/Profiles';
+import NotFound from '../layout/NotFound';
 
 const Routes = () => {
   return (
@@ -12,6 +13,8 @@ const Routes = () => {
       <Switch>
       <Route exact path="/register" component={Register} />
       <Route exact path="/login" component={Login} />
+      <Route exact path="/profiles" component={Profiles} />
+      <Route component={NotFound} />
       </Switch>
     </section>
   );

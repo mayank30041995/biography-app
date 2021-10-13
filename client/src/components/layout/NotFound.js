@@ -1,4 +1,3 @@
-/*
 import React, { Fragment } from 'react';
 
 const NotFound = () => {
@@ -13,4 +12,4 @@ const NotFound = () => {
 };
 
 export default NotFound;
- */
+ 

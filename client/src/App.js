@@ -2,15 +2,13 @@ import React, { Fragment, useEffect } from 'react';
 import Landing from './components/layout/Landing';
 import Routes from './components/routing/Routes';
 import Navbar from './components/layout/Navbar';
+import setAuthToken from './utils/setAuthToken';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { Provider } from 'react-redux';
 import store from './store';
 
 const App = () => {
-
-
-
   return (
     <Provider store={store}>
       <Router>

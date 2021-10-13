@@ -1,11 +1,10 @@
-
-/*
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 const ProfileAbout = ({
   profile: {
     bio,
+    company,
     skills,
     user: { name }
   }
@@ -13,7 +12,8 @@ const ProfileAbout = ({
   <div className='profile-about bg-light p-2'>
     {bio && (
       <Fragment>
-        <h2 className='text-primary'>{name.trim().split(' ')[0]}s Bio</h2>
+        <h2 className='text-primary'>{name.trim().split(' ')[0]}'s Profile</h2>
+        <i className='fas'>Company: {company}</i>
         <p>{bio}</p>
         <div className='line' />
       </Fragment>
@@ -34,4 +34,4 @@ ProfileAbout.propTypes = {
 };
 
 export default ProfileAbout;
- */
+ 

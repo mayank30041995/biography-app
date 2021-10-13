@@ -4,6 +4,7 @@ import Alert from '../layout/Alert';
 import Register from '../auth/Register';
 import Login from '../auth/Login';
 import Profiles from '../profiles/Profiles';
+import Profile from '../profile/Profile';
 import NotFound from '../layout/NotFound';
 
 const Routes = () => {
@@ -14,6 +15,7 @@ const Routes = () => {
       <Route exact path="/register" component={Register} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/profiles" component={Profiles} />
+      <Route exact path="/profile/:id" component={Profile} />
       <Route component={NotFound} />
       </Switch>
     </section>

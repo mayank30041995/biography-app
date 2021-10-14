@@ -5,7 +5,7 @@ import { login } from '../../actions/auth';
 import PropTypes from 'prop-types';
 
 
-const Login = ({ login }) => {
+const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -20,6 +20,10 @@ const Login = ({ login }) => {
     e.preventDefault();
     login(email, password);
   };
+
+  if (isAuthenticated) {
+    return <Redirect to="/dashboard" />;
+  }
 
   return (
     <Fragment>

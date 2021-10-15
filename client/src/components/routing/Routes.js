@@ -5,6 +5,9 @@ import Register from '../auth/Register';
 import Login from '../auth/Login';
 import Profiles from '../profiles/Profiles';
 import Profile from '../profile/Profile';
+import Dashboard from '../dashboard/Dashboard';
+import AddExperience from '../profile-forms/AddExperience';
+import AddEducation from '../profile-forms/AddEducation';
 import NotFound from '../layout/NotFound';
 
 const Routes = () => {
@@ -16,6 +19,9 @@ const Routes = () => {
       <Route exact path="/login" component={Login} />
       <Route exact path="/profiles" component={Profiles} />
       <Route exact path="/profile/:id" component={Profile} />
+      <Route exact path="/dashboard" component={Dashboard} />
+      <Route exact path="/add-experience" component={AddExperience} />
+      <Route exact path="/add-education" component={AddEducation} />
       <Route component={NotFound} />
       </Switch>
     </section>
